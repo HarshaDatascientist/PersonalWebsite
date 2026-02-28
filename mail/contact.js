@@ -160,8 +160,8 @@ window.addEventListener('load', function() {
             from_email: formData.email,
             subject: formData.subject,
             message: formData.message,
-            to_name: 'Dr. Harsha A. Bhute',
-            to_email: 'harsha.bhute@pccoepune.org'
+            // to_name: 'Dr. Harsha A. Bhute',
+            // to_email: 'harsha.bhute@pccoepune.org'
         };
         
         console.log('Sending with EmailJS...');
