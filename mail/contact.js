@@ -137,7 +137,7 @@ window.addEventListener('load', function() {
                 errorMessage = 'EmailJS service or template not found. Please verify your IDs. ';
             }
             
-            errorMessage += 'Please try again or email me directly at <a href="mailto:harsha.bhute@pccoepune.org">harsha.bhute@pccoepune.org</a>';
+            errorMessage += 'Please try again or email me directly at <a href="mailto:harshabhute@gmail.com">harshabhute@gmail.com</a>';
             
             showAlert('danger', errorMessage);
         } finally {
@@ -161,7 +161,7 @@ window.addEventListener('load', function() {
             subject: formData.subject,
             message: formData.message,
             to_name: 'Dr. Harsha A. Bhute',
-            to_email: 'harsha.bhute@pccoepune.org'
+            to_email: 'harshabhute@gmail.com'
         };
         
         console.log('Sending with EmailJS...');
