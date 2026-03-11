@@ -9,9 +9,8 @@
 const EMAILJS_CONFIG = {
     publicKey: 'YG76P2ZTGtTmSp2Gi',      // Your EmailJS public key
     serviceId: 'service_nko0ehm',        // Your service ID
-    templateId: 'YG76P2ZTGtTmSp2Gi'       // Your template ID
+    templateId: 'template_heq2mzb'       // Your template ID
 };
-
 // =================================================================
 // Initialize EmailJS
 // =================================================================
