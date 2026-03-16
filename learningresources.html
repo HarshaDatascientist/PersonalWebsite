@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dr. Harsha A. Bhute | Portfolio</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Dr. Harsha A. Bhute | Portfolio" name="keywords">
+        <meta content="Dr. Harsha A. Bhute | Portfolio" name="description">
+        <link href="img/favicon.ico" rel="icon">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            /* Subjects Taught Grid */
+            .subjects-section {
+                padding: 60px 0 40px 0;
+                background: #f9f9f9;
+            }
+            .subject-card {
+                display: flex;
+                align-items: center;
+                background: #ffffff;
+                border-left: 4px solid #27dab0;
+                border-radius: 6px;
+                padding: 14px 20px;
+                margin-bottom: 16px;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            .subject-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+                border-left-color: #5E17EB;
+            }
+            .subject-card i {
+                color: #27dab0;
+                font-size: 1.2rem;
+                margin-right: 14px;
+                min-width: 24px;
+                text-align: center;
+            }
+            .subject-card span {
+                font-size: 0.95rem;
+                font-weight: 500;
+                color: #414141;
+            }
+
+            /* Learning Resources Cards */
+            .resource-card {
+                background: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+                padding: 24px 22px;
+                margin-bottom: 20px;
+                transition: transform 0.2s, box-shadow 0.2s;
+                border-top: 4px solid #5E17EB;
+            }
+            .resource-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 32px rgba(0,0,0,0.14);
+            }
+            .resource-card h3 {
+                font-size: 1rem;
+                font-weight: 600;
+                color: #414141;
+                margin-bottom: 6px;
+            }
+            .resource-card .resource-tag {
+                display: inline-block;
+                background: #eef6ff;
+                color: #5E17EB;
+                font-size: 0.72rem;
+                font-weight: 600;
+                padding: 3px 10px;
+                border-radius: 20px;
+                margin-bottom: 10px;
+            }
+            .resource-card .btn-resource {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 7px 16px;
+                font-size: 0.82rem;
+                font-weight: 600;
+                color: #ffffff;
+                background: #27dab0;
+                border-radius: 4px;
+                border: none;
+                text-decoration: none;
+                transition: background 0.2s;
+            }
+            .resource-card .btn-resource:hover {
+                background: #5E17EB;
+                color: #ffffff;
+                text-decoration: none;
+            }
+            .section-divider {
+                display: flex;
+                align-items: center;
+                margin-bottom: 24px;
+            }
+            .section-divider-badge {
+                border-radius: 8px;
+                padding: 8px 20px;
+                font-weight: 700;
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+                margin-right: 14px;
+                white-space: nowrap;
+            }
+            .section-divider-line {
+                flex: 1;
+                height: 2px;
+            }
+            .folder-heading {
+                font-size: 0.88rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 16px;
+                padding-left: 4px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="51" id="learning">
+        <header class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">Dr. Harsha A. Bhute</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <nav class="navbar-nav ml-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="education.html" class="nav-item nav-link">Education</a>
+                        <a href="experience.html" class="nav-item nav-link">Experience</a>
+                        <a href="research.html" class="nav-item nav-link">Research</a>
+                        <a href="learningresources.html" class="nav-item nav-link active">Learning Resources</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Start -->
+        <main class="hero" id="home" style="min-height:45vh">
+            <div class="container-fluid">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-sm-12 col-md-8 text-center">
+                        <div class="hero-content">
+                            <div class="hero-text" style="margin: 5rem 0;">
+                                <h1>Learning Resources</h1>
+                                <p>Curated materials for students across all taught subjects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Hero End -->
+
+        <!-- Subjects Taught Section -->
+        <section class="subjects-section">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Academic Portfolio</p>
+                    <h2>Subjects Taught</h2>
+                </div>
+                <div class="row wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="col-md-6">
+                        <div class="subject-card"><i class="fas fa-server"></i><span>Advance Operating Systems</span></div>
+                        <div class="subject-card"><i class="fas fa-cogs"></i><span>System Programming and Operating System</span></div>
+                        <div class="subject-card"><i class="fas fa-cloud"></i><span>Cloud Computing</span></div>
+                        <div class="subject-card"><i class="fas fa-chart-line"></i><span>Data Science</span></div>
+                        <div class="subject-card"><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+                        <div class="subject-card"><i class="fas fa-code"></i><span>System Programming</span></div>
+                        <div class="subject-card"><i class="fas fa-project-diagram"></i><span>Software Engineering</span></div>
+                        <div class="subject-card"><i class="fas fa-wave-square"></i><span>Digital Signal Processing</span></div>
+                        <div class="subject-card"><i class="fas fa-database"></i><span>Database Management System</span></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="subject-card"><i class="fas fa-warehouse"></i><span>Data Warehousing and Data Mining</span></div>
+                        <div class="subject-card"><i class="fab fa-java"></i><span>Object Oriented Programming Lang</span></div>
+                        <div class="subject-card"><i class="fas fa-network-wired"></i><span>Computer Networks</span></div>
+                        <div class="subject-card"><i class="fas fa-wifi"></i><span>Wireless Technology</span></div>
+                        <div class="subject-card"><i class="fas fa-calculator"></i><span>Discrete Mathematics</span></div>
+                        <div class="subject-card"><i class="fas fa-sitemap"></i><span>Data Structures</span></div>
+                        <div class="subject-card"><i class="fas fa-search"></i><span>Applied Algorithms</span></div>
+                        <div class="subject-card"><i class="fas fa-hdd"></i><span>Operating System and Administrations</span></div>
+                        <div class="subject-card"><i class="fas fa-globe"></i><span>Data Communications and Computer Networks</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Subjects Taught End -->
+
+        <!-- Learning Resources Section -->
+        <section style="padding: 60px 0 60px 0; background: #ffffff;">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>Study Materials</p>
+                    <h2>Learning Resources</h2>
+                </div>
+
+                <!-- ===== M.TECH ===== -->
+                <div class="wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 48px;">
+                    <div class="section-divider">
+                        <div class="section-divider-badge" style="background:#5E17EB; color:#fff;">
+                            <i class="fas fa-graduation-cap" style="margin-right:8px;"></i>M.Tech
+                        </div>
+                        <div class="section-divider-line" style="background:linear-gradient(90deg,#5E17EB,#27dab0,transparent);"></div>
+                    </div>
+
+                    <!-- FY M.Tech · Sem I · 2024-25 -->
+                    <div style="margin-bottom: 32px;">
+                        <div class="folder-heading" style="color:#5E17EB;">
+                            <i class="fas fa-folder-open" style="color:#27dab0;"></i>
+                            FY M.Tech &nbsp;·&nbsp; Semester I &nbsp;·&nbsp; 2024-25
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <span class="resource-tag">M.Tech AI &amp; DS · Sem I</span>
+                                    <h3>Data Science</h3>
+                                    <div style="font-size:0.78rem; color:#999; margin-bottom:12px;">Code: MIT21PC01</div>
+                                    <a href="https://drive.google.com/drive/folders/1ZXDtxrom8x8BqZEYTGYmjUloHrTZoT7l9iW81ivbJNjbELJ1WTU4F7GJJLp1QDNwgIFTwDyQ" class="btn-resource" target="_blank">
+                                        <i class="fab fa-google-drive"></i> Open Drive
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FY M.Tech · Sem II -->
+                    <div style="margin-bottom: 32px;">
+                        <div class="folder-heading" style="color:#5E17EB;">
+                            <i class="fas fa-folder-open" style="color:#27dab0;"></i>
+                            FY M.Tech &nbsp;·&nbsp; Semester II
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card">
+                                    <span class="resource-tag">M.Tech AI &amp; DS · Sem II</span>
+                                    <h3>Big Data Technologies</h3>
+                                    <a href="https://drive.google.com/drive/folders/1bNaB7hje-KS0vPcaSGg7Vxvkc3VfNNANmTkNIcswcAUaqoqwsAkLryX0VsGWvtTItfUqvrpa" class="btn-resource" target="_blank">
+                                        <i class="fab fa-google-drive"></i> Open Drive
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ===== B.TECH ===== -->
+                <div class="wow fadeInUp" data-wow-delay="0.15s" style="margin-bottom: 48px;">
+                    <div class="section-divider">
+                        <div class="section-divider-badge" style="background:#27dab0; color:#fff;">
+                            <i class="fas fa-book" style="margin-right:8px;"></i>B.Tech
+                        </div>
+                        <div class="section-divider-line" style="background:linear-gradient(90deg,#27dab0,#5E17EB,transparent);"></div>
+                    </div>
+
+                    <!-- SY B.Tech · Sem III -->
+                    <div style="margin-bottom: 32px;">
+                        <div class="folder-heading" style="color:#27dab0;">
+                            <i class="fas fa-folder-open" style="color:#5E17EB;"></i>
+                            SY B.Tech &nbsp;·&nbsp; Semester III
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card" style="border-top-color:#27dab0;">
+                                    <span class="resource-tag" style="background:#e6faf6; color:#27dab0;">B.Tech I.T. · Sem III</span>
+                                    <h3>Data Structures</h3>
+                                    <div style="font-size:0.78rem; color:#999; margin-bottom:12px;">Code: BIT23PC01</div>
+                                    <a href="https://drive.google.com/drive/folders/1kcIEA12M-7Cq_o8XYkLDAR8ytQuOeFHKCTuX5Oa7fClanv6Or_f-FsuHOZZobiS8cXhNoxdF" class="btn-resource" style="background:#27dab0;" target="_blank">
+                                        <i class="fab fa-google-drive"></i> Open Drive
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TY B.Tech · Sem V -->
+                    <div style="margin-bottom: 32px;">
+                        <div class="folder-heading" style="color:#27dab0;">
+                            <i class="fas fa-folder-open" style="color:#5E17EB;"></i>
+                            TY B.Tech &nbsp;·&nbsp; Semester V
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card" style="border-top-color:#27dab0;">
+                                    <span class="resource-tag" style="background:#e6faf6; color:#27dab0;">B.Tech I.T. · Sem V</span>
+                                    <h3>Fundamentals of Digital Image Processing</h3>
+                                    <div style="font-size:0.78rem; color:#999; margin-bottom:12px;">Code: BIT25PE01</div>
+                                    <a href="https://drive.google.com/drive/folders/15r8bJ3wAm7HI4TAKd_gaZQCM8ZwSbJTsrfLyMXrfrZAEfE9vxZIb-R-NVBdbQOOM3wLnBWT9" class="btn-resource" style="background:#27dab0;" target="_blank">
+                                        <i class="fab fa-google-drive"></i> Open Drive
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card" style="border-top-color:#27dab0;">
+                                    <span class="resource-tag" style="background:#e6faf6; color:#27dab0;">B.Tech I.T. · Sem V · 2024-25</span>
+                                    <h3>Foundations of Data Science</h3>
+                                    <div style="font-size:0.78rem; color:#999; margin-bottom:12px;">Code: BIT5508</div>
+                                    <a href="https://drive.google.com/drive/folders/15r8bJ3wAm7HI4TAKd_gaZQCM8ZwSbJTsrfLyMXrfrZAEfE9vxZIb-R-NVBdbQOOM3wLnBWT9" class="btn-resource" style="background:#27dab0;" target="_blank">
+                                        <i class="fab fa-google-drive"></i> Open Drive
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TY B.Tech · Sem VI -->
+                    <div style="margin-bottom: 32px;">
+                        <div class="folder-heading" style="color:#27dab0;">
+                            <i class="fas fa-folder-open" style="color:#5E17EB;"></i>
+                            TY B.Tech &nbsp;·&nbsp; Semester VI
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card" style="border-top-color:#27dab0;">
+                                    <span class="resource-tag" style="background:#e6faf6; color:#27dab0;">B.Tech I.T. · Sem VI · 2023-24</span>
+                                    <h3>Machine Learning</h3>
+                                    <div style="font-size:0.78rem; color:#999; margin-bottom:12px;">Code: BIT6401</div>
+                                    <a href="https://drive.google.com/drive/folders/1tx_ZH0PMSYURFBKB9ngnSNI3kf9-L5-yA2x7le3cVXzB1qlWOLg3GCQl8cqePSD3S60qtObg" class="btn-resource" style="background:#27dab0;" target="_blank">
+                                        <i class="fab fa-google-drive"></i> Open Drive
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="resource-card" style="border-top-color:#27dab0;">
+                                    <span class="resource-tag" style="background:#e6faf6; color:#27dab0;">B.Tech I.T. · Sem VI</span>
+                                    <h3>Natural Language Processing</h3>
+                                    <div style="font-size:0.78rem; color:#999; margin-bottom:12px;">Code: BIT26PE07 (PEC-3)</div>
+                                    <a href="https://drive.google.com/drive/folders/1zgyHAqlG8eei-m1FmU70ycvrSz-mNWwdN5eFUTs67TxtJP36ewtcbUUl4P5RMYwHkU-annEv" class="btn-resource" style="background:#27dab0;" target="_blank">
+                                        <i class="fab fa-google-drive"></i> Open Drive
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- B.Tech End -->
+
+            </div>
+        </section>
+        <!-- Learning Resources End -->
+
+        <footer class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>Dr. Harsha A. Bhute</h2>
+                        <h3>Department of Computer Engineering<br>Pimpri Chinchwad College of Engineering (PCCOE), Nigdi, Pune-411044</h3>
+                        <div class="footer-menu">
+                            <a href="tel:+919422844610"><p>+91 94228 44610</p></a>
+                            <a href="mailto:harsha.bhute@pccoepune.org"><p> | harsha.bhute@pccoepune.org</p></a>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://orcid.org/my-orcid?orcid=0000-0002-1522-4053"><img style="margin: 0 .5rem; height: 3rem; width: auto;" src="img/orcid.svg" alt="ORCID"></a>
+                            <a href="https://www.webofscience.com/wos/author/record/JWP-1265-2024"><img style="margin: -5rem .5rem; height: 10rem; width: auto;" src="img/web-of-science.svg" alt="Web of Science"></a>
+                            <a href="https://www.scopus.com/authid/detail.uri?authorId=57291651900"><img style="margin: 0 .5rem; height: 2.5rem; width: auto;" src="img/Scopus.svg" alt="Scopus"></a>
+                            <a href="https://scholar.google.com/citations?user=mKR1Jr4AAAAJ&hl=en"><img style="margin: 0 .5rem; height: 3rem; width: auto;" src="img/scholar.svg" alt="Scholar"></a>
+                            <a href="https://www.linkedin.com/in/dr-harsha-bhute"><img style="margin: 0 .5rem; height: 3rem; width: auto;" src="img/icons8-linkedin.svg" alt="LinkedIn"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; <a href="#">Dr. Harsha Bhute</a>, All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <div id="loader" class="show"><div class="loader"></div></div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

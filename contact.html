@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dr. Harsha A. Bhute | Contact</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Dr. Harsha A. Bhute | Portfolio" name="keywords">
+        <meta content="Dr. Harsha A. Bhute | Portfolio" name="description">
+        <link href="img/favicon.ico" rel="icon">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            /* Contact page hero photo fix */
+            .hero .hero-image-contact {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                padding: 2rem 2rem 0 0;
+            }
+            .hero .hero-image-contact img {
+                max-width: 380px;
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                object-fit: cover;
+                box-shadow: 0 8px 40px rgba(0,0,0,0.2);
+            }
+            /* Contact form card */
+            .contact-section {
+                padding: 70px 0;
+                background: #f9f9f9;
+            }
+            .contact-info-card {
+                background: #5E17EB;
+                border-radius: 12px;
+                padding: 40px 32px;
+                color: #fff;
+                height: 100%;
+            }
+            .contact-info-card h3 {
+                color: #ffffff;
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            .contact-info-card p {
+                color: rgba(255,255,255,0.85);
+                font-size: 0.9rem;
+                margin-bottom: 30px;
+            }
+            .contact-info-item {
+                display: flex;
+                align-items: flex-start;
+                gap: 14px;
+                margin-bottom: 22px;
+            }
+            .contact-info-item i {
+                color: #27dab0;
+                font-size: 1.1rem;
+                margin-top: 3px;
+                min-width: 20px;
+            }
+            .contact-info-item span {
+                color: rgba(255,255,255,0.9);
+                font-size: 0.9rem;
+                line-height: 1.5;
+            }
+            .contact-form-card {
+                background: #ffffff;
+                border-radius: 12px;
+                padding: 40px 36px;
+                box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+                height: 100%;
+            }
+            .contact-form-card h3 {
+                font-size: 1.4rem;
+                font-weight: 700;
+                margin-bottom: 6px;
+                color: #414141;
+            }
+            .contact-form-card .subtitle {
+                color: #797979;
+                font-size: 0.88rem;
+                margin-bottom: 28px;
+            }
+            .form-field {
+                position: relative;
+                margin-bottom: 22px;
+            }
+            .form-field label {
+                display: block;
+                font-size: 0.82rem;
+                font-weight: 600;
+                color: #414141;
+                margin-bottom: 6px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            .form-field input,
+            .form-field textarea {
+                width: 100%;
+                padding: 12px 16px;
+                font-size: 0.9rem;
+                font-family: 'Poppins', sans-serif;
+                color: #414141;
+                background: #f8f8f8;
+                border: 1.5px solid #e5e5e5;
+                border-radius: 8px;
+                outline: none;
+                transition: border-color 0.2s, background 0.2s;
+            }
+            .form-field input:focus,
+            .form-field textarea:focus {
+                border-color: #5E17EB;
+                background: #fff;
+            }
+            .form-field textarea {
+                resize: vertical;
+                min-height: 110px;
+            }
+            .btn-send {
+                width: 100%;
+                padding: 14px;
+                font-size: 0.95rem;
+                font-weight: 600;
+                letter-spacing: 1px;
+                color: #ffffff;
+                background: #5E17EB;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background 0.2s, transform 0.1s;
+            }
+            .btn-send:hover {
+                background: #27dab0;
+                transform: translateY(-1px);
+            }
+            .btn-send:disabled {
+                opacity: 0.7;
+                cursor: not-allowed;
+            }
+            #form-alert {
+                display: none;
+                padding: 14px 18px;
+                border-radius: 8px;
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+            #form-alert.success {
+                background: #e6faf5;
+                color: #0d7a5f;
+                border: 1px solid #27dab0;
+                display: block;
+            }
+            #form-alert.error {
+                background: #fff0f0;
+                color: #c0392b;
+                border: 1px solid #e74c3c;
+                display: block;
+            }
+        </style>
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="51" id="contact">
+        <header class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">Dr. Harsha A. Bhute</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <nav class="navbar-nav ml-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="education.html" class="nav-item nav-link">Education</a>
+                        <a href="experience.html" class="nav-item nav-link">Experience</a>
+                        <a href="research.html" class="nav-item nav-link">Research</a>
+                        <a href="learningresources.html" class="nav-item nav-link">Learning Resources</a>
+                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Start -->
+        <main class="hero" id="home" style="min-height:55vh">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-content">
+                            <div class="hero-text" style="margin: 7rem 0; padding-left: 2rem;">
+                                <h1 style="font-size:3rem; font-weight:700; color:#fff; margin-bottom:12px;">Get In Touch</h1>
+                                <p style="color:rgba(255,255,255,0.85); font-size:1rem; max-width:420px;">Have a question, collaboration idea, or just want to connect? Send a message and I'll get back to you soon.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-none d-md-flex align-items-center justify-content-center">
+                        <div class="hero-image-contact">
+                            <img src="img/hero.jpg" alt="Contact Dr. Harsha Bhute">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Hero End -->
+
+        <!-- Contact Section Start -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Info Card -->
+                    <div class="col-md-4 mb-4 mb-md-0 wow fadeInLeft" data-wow-delay="0.1s">
+                        <div class="contact-info-card">
+                            <h3>Contact Info</h3>
+                            <p>Reach out through any of the channels below</p>
+
+                            <div class="contact-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Dept. of Computer Engineering,<br>PCCoE, Nigdi, Pune – 411044</span>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span><a href="tel:+919422844610" style="color:rgba(255,255,255,0.9); text-decoration:none;">+91 94228 44610</a></span>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <span><a href="mailto:harsha.bhute@pccoepune.org" style="color:rgba(255,255,255,0.9); text-decoration:none; word-break:break-all;">harsha.bhute@pccoepune.org</a></span>
+                            </div>
+                            <div class="contact-info-item">
+                                <i class="fab fa-linkedin"></i>
+                                <span><a href="https://www.linkedin.com/in/dr-harsha-bhute" target="_blank" style="color:rgba(255,255,255,0.9); text-decoration:none;">linkedin.com/in/dr-harsha-bhute</a></span>
+                            </div>
+
+                            <div style="margin-top:30px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.2);">
+                                <p style="font-size:0.82rem; color:rgba(255,255,255,0.7); margin:0;">Research Profiles</p>
+                                <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;">
+                                    <a href="https://orcid.org/0000-0002-1522-4053" target="_blank" style="background:rgba(255,255,255,0.15); padding:5px 12px; border-radius:4px; color:#fff; font-size:0.78rem; text-decoration:none;">ORCID</a>
+                                    <a href="https://www.scopus.com/authid/detail.uri?authorId=57291651900" target="_blank" style="background:rgba(255,255,255,0.15); padding:5px 12px; border-radius:4px; color:#fff; font-size:0.78rem; text-decoration:none;">Scopus</a>
+                                    <a href="https://scholar.google.com/citations?user=mKR1Jr4AAAAJ&hl=en" target="_blank" style="background:rgba(255,255,255,0.15); padding:5px 12px; border-radius:4px; color:#fff; font-size:0.78rem; text-decoration:none;">Scholar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Card -->
+                    <div class="col-md-8 wow fadeInRight" data-wow-delay="0.2s">
+                        <div class="contact-form-card">
+                            <h3>Send a Message</h3>
+                            <p class="subtitle">Fill in the form below and I'll respond within 1-2 business days.</p>
+
+                            <div id="success"></div>
+
+                            <form id="contactForm" novalidate>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-field">
+                                            <label for="name">Full Name *</label>
+                                            <input type="text" id="name" placeholder="Your full name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-field">
+                                            <label for="email">Email Address *</label>
+                                            <input type="email" id="email" placeholder="your@email.com" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-field">
+                                    <label for="subject">Subject *</label>
+                                    <input type="text" id="subject" placeholder="What is this regarding?" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="message">Message *</label>
+                                    <textarea id="message" placeholder="Write your message here..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn-send" id="sendMessageButton">
+                                    <i class="fas fa-paper-plane" style="margin-right:8px;"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section End -->
+
+        <footer class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>Dr. Harsha A. Bhute</h2>
+                        <h3>Department of Computer Engineering<br>Pimpri Chinchwad College of Engineering (PCCOE), Nigdi, Pune-411044</h3>
+                        <div class="footer-menu">
+                            <a href="tel:+919422844610"><p>+91 94228 44610</p></a>
+                            <a href="mailto:harsha.bhute@pccoepune.org"><p> | harsha.bhute@pccoepune.org</p></a>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://orcid.org/my-orcid?orcid=0000-0002-1522-4053"><img style="margin: 0 .5rem; height: 3rem; width: auto;" src="img/orcid.svg" alt="ORCID"></a>
+                            <a href="https://www.webofscience.com/wos/author/record/JWP-1265-2024"><img style="margin: -5rem .5rem; height: 10rem; width: auto;" src="img/web-of-science.svg" alt="Web of Science"></a>
+                            <a href="https://www.scopus.com/authid/detail.uri?authorId=57291651900"><img style="margin: 0 .5rem; height: 2.5rem; width: auto;" src="img/Scopus.svg" alt="Scopus"></a>
+                            <a href="https://scholar.google.com/citations?user=mKR1Jr4AAAAJ&hl=en"><img style="margin: 0 .5rem; height: 3rem; width: auto;" src="img/scholar.svg" alt="Scholar"></a>
+                            <a href="https://www.linkedin.com/in/dr-harsha-bhute"><img style="margin: 0 .5rem; height: 3rem; width: auto;" src="img/icons8-linkedin.svg" alt="LinkedIn"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; <a href="#">Dr. Harsha Bhute</a>, All Rights Reserved</p>
+                </div>
+            </div>
+        </footer>
+
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <div id="loader" class="show"><div class="loader"></div></div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/typed/typed.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+        <!-- EmailJS SDK -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
